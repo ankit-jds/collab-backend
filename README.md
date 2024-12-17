@@ -10,3 +10,10 @@ startapp
 folder structure
 
 runserver successful.
+
+create RESTful GET API 
+
+installed channels_redis django-redis daphne
+ASGI setup
+setup asgi routing
+collab consumer connected over websocket
