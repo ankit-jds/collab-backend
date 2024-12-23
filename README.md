@@ -11,19 +11,26 @@ folder structure
 
 runserver successful.
 
-create RESTful GET API 
+✅create RESTful GET API 
 
-installed channels_redis django-redis daphne
+✅installed channels_redis django-redis daphne
 ASGI setup
 setup asgi routing
 collab consumer connected over websocket
 
-complete the basic websocket receive, send to group, channel layers, etc
+✅complete the basic websocket receive, send to group, channel layers, etc
+
+✅complete document model, get documents, get specific document, create document (POST).
+
+✅retrieve the document latest content and send to user when websocket connection established.
+
+create operation model and save each operation i.e (INSERT/DELETE) in db 
 
 For realtime collaboration tool like google doc.
 
 Initially,
 create document model => to store the content of document
+
 implement django-redis to cache document, latest versions  
 
 i would consider only operations like INSERT, DELETE
