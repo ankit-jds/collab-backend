@@ -24,7 +24,7 @@ collab consumer connected over websocket
 
 ✅retrieve the document latest content and send to user when websocket connection established.
 
-create operation model and save each operation i.e (INSERT/DELETE) in db 
+✅create operation model and save each operation i.e (INSERT/DELETE) in db 
 
 For realtime collaboration tool like google doc.
 
