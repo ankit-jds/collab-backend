@@ -85,5 +85,6 @@ class DocumentConsumer(AsyncWebsocketConsumer):
                 operation_type=op.get("operation", ""),
                 position=op.get("position", ""),
                 character=op.get("character", ""),
+                # this will be automatically picked by authentication
                 user_id=op.get("userid", ""),
             )

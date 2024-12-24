@@ -26,6 +26,11 @@ collab consumer connected over websocket
 
 ✅create operation model and save each operation i.e (INSERT/DELETE) in db 
 
+✅create snapshot to save versions of document by aggregating operations
+
+next cursor position of active users.
+❓DOUBT: does same user from different devices have two cursors??
+
 For realtime collaboration tool like google doc.
 
 Initially,
