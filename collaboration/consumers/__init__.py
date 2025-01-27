@@ -1,2 +1,4 @@
 from .collab_consumer import CollabConsumer
 from .document_consumer import DocumentConsumer
+from .anonymous_user_consumer import AnonymousUserConsumer
+from .authenticated_user_consumer import AuthenticatedUserConsumer

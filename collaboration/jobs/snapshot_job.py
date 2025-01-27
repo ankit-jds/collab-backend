@@ -18,7 +18,7 @@ def apply_operations(operations: list[Operation], content: str):
 
 # will call snapshot job function here
 def snapshot_job():
-    docs = Document.objects.filter(id=5)
+    docs = Document.objects.all()
     for doc in docs:
         # assuming document.content to have latest content
         content = doc.content
