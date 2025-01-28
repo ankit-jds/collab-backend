@@ -28,6 +28,8 @@ collab consumer connected over websocket
 
 ✅create snapshot to save versions of document by aggregating operations
 
+✅create qrcode generation and qrlogin feature
+
 next cursor position of active users.
 ❓DOUBT: does same user from different devices have two cursors??
 
