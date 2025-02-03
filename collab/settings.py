@@ -1,20 +1,25 @@
 from pathlib import Path
+import environ
+
+env = environ.Env(
+    DEBUG=(bool, False),
+)
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+
+environ.Env.read_env(BASE_DIR / ".env")
 
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "django-insecure-1%*p@+h=ybq&_27urr3s0a574z(pz4i_b6pcpheehs(5tj7n1l"
+SECRET_KEY = env("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
-ALLOWED_HOSTS = ["*"]
-
+DEBUG = env("DEBUG")
 
 # Application definition
 
@@ -71,6 +76,7 @@ DATABASES = {
         "ENGINE": "django.db.backends.sqlite3",
         "NAME": BASE_DIR / "db.sqlite3",
     }
+    # "default": env.db()
 }
 
 
@@ -126,6 +132,18 @@ CHANNEL_LAYERS = {
             "hosts": [("127.0.0.1", 6379)],
         },
     },
+    # "default": {
+    #     "BACKEND": "channels_redis.core.RedisChannelLayer",
+    #     "CONFIG": {
+    #         "hosts": [env("REDIS_URL")],
+    #     },
+    #     # "LOCATION": "advanced-ape-47545.upstash.io",
+    # }
 }
 
+
 CORS_ALLOW_ALL_ORIGINS = True
+
+ALLOWED_HOSTS = ["localhost", "127.0.0.1", ".fly.dev", "*"]
+
+# CSRF_TRUSTED_ORIGINS = ["https://*.fly.dev"]

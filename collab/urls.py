@@ -33,7 +33,7 @@ def schedule_next_execution(
 schedule_next_execution(function=snapshot_job)
 
 try:
-    # scheduler.start()
+    scheduler.start()
     pass
 except (KeyboardInterrupt, SystemExit):
     scheduler.shutdown()
