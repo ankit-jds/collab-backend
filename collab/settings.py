@@ -72,11 +72,11 @@ WSGI_APPLICATION = "collab.wsgi.application"
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
 DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
-    }
-    # "default": env.db()
+    # "default": {
+    #     "ENGINE": "django.db.backends.sqlite3",
+    #     "NAME": BASE_DIR / "db.sqlite3",
+    # }
+    "default": env.db()
 }
 
 
@@ -126,19 +126,19 @@ ASGI_APPLICATION = "collab.asgi.application"
 
 # CHANNEL LAYERS
 CHANNEL_LAYERS = {
-    "default": {
-        "BACKEND": "channels_redis.core.RedisChannelLayer",
-        "CONFIG": {
-            "hosts": [("127.0.0.1", 6379)],
-        },
-    },
     # "default": {
     #     "BACKEND": "channels_redis.core.RedisChannelLayer",
     #     "CONFIG": {
-    #         "hosts": [env("REDIS_URL")],
+    #         "hosts": [("127.0.0.1", 6379)],
     #     },
-    #     # "LOCATION": "advanced-ape-47545.upstash.io",
-    # }
+    # },
+    "default": {
+        "BACKEND": "channels_redis.core.RedisChannelLayer",
+        "CONFIG": {
+            "hosts": [env("REDIS_URL")],
+        },
+        # "LOCATION": "advanced-ape-47545.upstash.io",
+    }
 }
 
 

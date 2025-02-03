@@ -1,0 +1,48 @@
+# Ignore Python bytecode files
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+
+# Ignore the virtual environment directory
+venv/
+env/
+*.venv
+
+# Ignore the Django migrations (except the actual migration files you want to keep)
+*/migrations/*
+
+# Ignore local development and configuration files
+*.env
+*.local
+*.sqlite3  # SQLite database file (if used)
+
+# Ignore Django log files
+*.log
+
+# Ignore test and coverage files
+/tests/
+/coverage/
+
+# Ignore static and media files that are generated during runtime
+/static/
+/media/
+
+# Ignore Docker-related files
+Dockerfile
+docker-compose.yml
+
+# Ignore git-related files
+.git/
+.gitignore
+
+# Ignore IDE/editor-specific files
+.vscode/
+.idea/
+
+# Ignore build and distribution files (if you’re using build tools or packagers)
+build/
+dist/
+
+# Ignore any other files that are not required in the production container
+*.swp  # Vim swap files
