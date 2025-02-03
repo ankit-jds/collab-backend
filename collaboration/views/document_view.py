@@ -58,7 +58,7 @@ class DocumentView(APIView):
     @response_wrapper
     def post(self, request, response):
         payload = request.data
-        name = request.data.get("document_name", "Untitled document")
+        name = request.data.get("document_name", "Ankit's document")
         document = Document.objects.create(name=name)
         response.data = DocumentUIModel(document=document)
         response.message = "Document Created successfully."
