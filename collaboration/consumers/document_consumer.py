@@ -28,15 +28,15 @@ class DocumentConsumer(AsyncWebsocketConsumer):
             await self.send_online_users()
 
             await self.accept()
-            await self.send(
-                text_data=json.dumps(
-                    {
-                        # will pass userid once auth is setup
-                        "message": f"user connected to {self.group_name}",
-                        "content": document_content,
-                    }
-                )
-            )
+            # await self.send(
+            #     text_data=json.dumps(
+            #         {
+            #             # will pass userid once auth is setup
+            #             "message": f"user connected to {self.group_name}",
+            #             "content": document_content,
+            #         }
+            #     )
+            # )
         else:
             await self.close()
 

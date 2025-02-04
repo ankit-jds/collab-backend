@@ -9,7 +9,7 @@ from typing import Callable
 from collaboration.jobs.snapshot_job import snapshot_job
 
 urlpatterns = [
-    path("admin/", admin.site.urls),
+    # path("admin/", admin.site.urls),
     path("api/c/", include("collaboration.urls")),
 ]
 scheduler = BackgroundScheduler()
